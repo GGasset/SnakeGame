@@ -5,8 +5,6 @@ VisualStudioVersion = 17.1.31911.260
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnakeGame", "SnakeGame.csproj", "{53D6B115-B497-4B6C-BA2E-48370E18E2E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStructures", "DataStructures\DataStructures\DataStructures.csproj", "{FBCCB477-CCE2-4690-8FB2-FCCD63C33CEC}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{53D6B115-B497-4B6C-BA2E-48370E18E2E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53D6B115-B497-4B6C-BA2E-48370E18E2E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53D6B115-B497-4B6C-BA2E-48370E18E2E5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FBCCB477-CCE2-4690-8FB2-FCCD63C33CEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FBCCB477-CCE2-4690-8FB2-FCCD63C33CEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FBCCB477-CCE2-4690-8FB2-FCCD63C33CEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FBCCB477-CCE2-4690-8FB2-FCCD63C33CEC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,15 @@
+G:\Code\C# repos\SnakeGame\bin\Debug\SnakeGame.exe.config
+G:\Code\C# repos\SnakeGame\bin\Debug\SnakeGame.exe
+G:\Code\C# repos\SnakeGame\bin\Debug\SnakeGame.pdb
+G:\Code\C# repos\SnakeGame\bin\Debug\DataStructures.dll
+G:\Code\C# repos\SnakeGame\bin\Debug\DataStructures.pdb
+G:\Code\C# repos\SnakeGame\bin\Debug\DataStructures.dll.config
+G:\Code\C# repos\SnakeGame\obj\Debug\SnakeGame.csproj.AssemblyReference.cache
+G:\Code\C# repos\SnakeGame\obj\Debug\SnakeGame.csproj.SuggestedBindingRedirects.cache
+G:\Code\C# repos\SnakeGame\obj\Debug\SnakeGame.Form1.resources
+G:\Code\C# repos\SnakeGame\obj\Debug\SnakeGame.Properties.Resources.resources
+G:\Code\C# repos\SnakeGame\obj\Debug\SnakeGame.csproj.GenerateResource.cache
+G:\Code\C# repos\SnakeGame\obj\Debug\SnakeGame.csproj.CoreCompileInputs.cache
+G:\Code\C# repos\SnakeGame\obj\Debug\SnakeGame.csproj.CopyComplete
+G:\Code\C# repos\SnakeGame\obj\Debug\SnakeGame.exe
+G:\Code\C# repos\SnakeGame\obj\Debug\SnakeGame.pdb

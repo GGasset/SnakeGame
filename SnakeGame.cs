@@ -5,7 +5,7 @@ using System.Drawing;
 
 namespace SnakeGame
 {
-    internal class SnakeGame : Game
+    public class SnakeGame : Game
     {
         public bool isFinished = false;
         public TypeGrid<CellType> grid;

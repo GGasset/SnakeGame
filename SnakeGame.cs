@@ -13,7 +13,9 @@ namespace SnakeGame
         List<Point> snakePositions;
         Point FoodPos;
         public int Score { get; private set; }
-        public int eatenFood { get; private set; }
+        public int EatenFood { get; private set; }
+        public double FoodDistance => Math.Sqrt(Math.Pow(FoodPos.X - snakePositions[0].X, 2) + Math.Pow(FoodPos.Y - snakePositions[0].Y, 2));
+        public double MaxBoardDistance => Math.Sqrt(Math.Pow(gridSize, 2) + Math.Pow(gridSize, 2));
 
         bool hasEaten = false;
         int gridSize;
@@ -29,13 +31,13 @@ namespace SnakeGame
         {
             initialFoodDistance = 0;
             Score = 0;
-            eatenFood = 0;
+            EatenFood = 0;
             snakePositions = new List<Point>();
             gridSize = Math.Max(gridSize, 8);
             grid = new TypeGrid<CellType>(gridSize, gridSize, CellType.Empty);
 
             int xStart = 5, yStart = gridSize / 2;
-            for (int i = 0; i <= 5; i++)
+            for (int i = 0; i <= 4; i++)
                 snakePositions.Add(new Point(xStart - i, yStart));
             bool initialFoodPosSwitch = Convert.ToBoolean(Math.Round(new Random(DateTime.Now.Millisecond).NextDouble()));
             int x = Convert.ToInt32(gridSize / 2), y;
@@ -44,6 +46,9 @@ namespace SnakeGame
             else
                 y = gridSize - 3;
             grid.Columns[x].Cells[y].value = CellType.Food;
+            FoodPos = new Point(x, y);
+
+            UpdateBoard();
         }
 
         public override void Update()
@@ -59,7 +64,7 @@ namespace SnakeGame
             nextY = snakePositions[0].Y + deltaPos.Y;
 
             Point nextPos = new Point(nextX, nextY);
-            if (nextPos.X > gridSize || nextPos.Y > gridSize || nextX < 0 || nextY < 0)
+            if (nextPos.X >= gridSize || nextPos.Y >= gridSize || nextX < 0 || nextY < 0)
             {
                 isFinished = true;
                 return;
@@ -69,7 +74,7 @@ namespace SnakeGame
             switch (nextPosType)
             {
                 case CellType.Empty:
-                    snakePositions.Add(nextPos);
+                    snakePositions.Insert(0, nextPos);
                     snakePositions.RemoveAt(snakePositions.Count - 1);
                     if (!hasEaten)
                     {
@@ -81,11 +86,11 @@ namespace SnakeGame
                     }
                     break;
                 case CellType.Food:
-                    snakePositions.Add(nextPos);
+                    snakePositions.Insert(0, nextPos);
                     UpdateBoard();
                     GenerateFoodPos();
                     Score++;
-                    eatenFood++;
+                    EatenFood++;
                     hasEaten = true;
                     return;
                 case CellType.Head:
@@ -174,7 +179,7 @@ namespace SnakeGame
             return s;
         }
 
-        public void UpdateBoard()
+        private void UpdateBoard()
         {
             grid = new TypeGrid<CellType>(gridSize, gridSize, CellType.Empty);
             grid.SetCell(FoodPos, CellType.Food);
